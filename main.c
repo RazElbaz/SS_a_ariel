@@ -4,8 +4,8 @@
  int main(){
 
      int num1,num2,min,max;
-     scanf("%d",&num1);
-     scanf("%d",&num2);
+     scanf("%d %d",&num1,&num2);
+     //scanf("%d",&num2);
      if(num1<num2){
          min=num1;
          max=num2;
@@ -44,6 +44,6 @@
      }
       printf("\n");
  
-
+return 0;
      
  }
