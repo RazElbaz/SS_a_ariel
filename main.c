@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "NumClass.h"
 
+
  int main(){
 
      int num1,num2,min,max;
@@ -18,7 +19,7 @@
      printf("The Armstrong numbers are:");
      for(int i=min;i<=max;i++){
          int current=isArmstrong(i);
-         if(current==1)printf(" %d ",i);
+         if(current==1)printf(" %d",i);
      }
      printf("\n");
       printf("The Palindromes are:");
