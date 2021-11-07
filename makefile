@@ -35,17 +35,19 @@ main.o: main.c NumClass.h
 
 #make mains:
 mains: main.o libclassrec.a
-	gcc -Wall -g -o mains main.o libclassrec.a 
+	gcc -Wall -g -o mains main.o libclassrec.a -lm 
 
 #make maindloop:
 maindloop : main.o libclassloops.so
-	gcc -Wall -g -o maindloop main.o libclassloops.so  
+	gcc -Wall -g -o maindloop main.o ./libclassloops.so -lm 
 
 #make maindrec: 
 maindrec: main.o libclassrec.so
-	gcc -Wall -g -o maindrec main.o libclassrec.so 
+	gcc -Wall -g -o maindrec main.o ./libclassrec.so -lm
 
 #make clean
 clean:
 	rm -f *.o *.a *.so mains maindloop maindrec 
 
+
+ 
