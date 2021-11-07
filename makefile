@@ -30,6 +30,9 @@ advancedClassificationLoop.o: advancedClassificationLoop.c NumClass.h
 advancedClassificationRecursion.o: advancedClassificationRecursion.c NumClass.h 
 	gcc -Wall -g -c advancedClassificationRecursion.c
 
+main.o: main.c NumClass.h 
+	gcc -Wall -g -c main.c
+
 #make mains:
 mains: main.o libclassrec.a
 	gcc -Wall -g -o mains main.o libclassrec.a 
@@ -46,5 +49,3 @@ maindrec: main.o libclassrec.so
 clean:
 	rm -f *.o *.a *.so mains maindloop maindrec 
 
-
- 
